@@ -6,7 +6,7 @@ public class QuestSwitch {
         Scanner console = new Scanner(System.in);
 
         double nilaiSd, nilaiPbo, nilaiBd, nilaiAlgo, nilaiRpl, rataRata, totalNilai;
-        String grade, mataKuliah;
+        String grade, mataKuliah, status;
 
         System.out.println("Masukan Nilai Anda");
         System.out.println("==================");
@@ -28,6 +28,33 @@ public class QuestSwitch {
         System.out.println("================================");
         System.out.println("Total Nilai :" +totalNilai);
         System.out.println("Total Rata-Rata :" +rataRata);
+
+        if (rataRata >= 3.75) {
+            grade = "A (Sangat Baik)";
+        } else if (rataRata >= 3.50) {
+            grade = "AB (Baik Sekali)";
+        } else if (rataRata >= 3.00) {
+            grade = "B (Baik)";
+        } else if (rataRata >= 2.50) {
+            grade = "BC (Cukup)";
+        } else {
+            grade = "C (Kurang)";
+        }
+
+        switch (grade) {
+            case "A":
+            case "AB":
+                status = "Lulus";
+                break;
+            case "B":
+            case "BC":
+            case "C":
+                status = "Tidak Lulus";
+                break;
+            default:
+                status = "Error";
+                break;
+        }
 
         console.close();
     }
