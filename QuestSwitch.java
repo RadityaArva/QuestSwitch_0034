@@ -24,6 +24,11 @@ public class QuestSwitch {
         totalNilai = nilaiSd + nilaiPbo + nilaiBd + nilaiAlgo + nilaiRpl;
         rataRata = totalNilai / 5;
 
+        System.out.println("Total Nilai dan Rata-Rata Anda :");
+        System.out.println("================================");
+        System.out.println("Total Nilai :" +totalNilai);
+        System.out.println("Total Rata-Rata :" +rataRata);
+
         console.close();
     }
     
