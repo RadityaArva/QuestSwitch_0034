@@ -21,6 +21,8 @@ public class QuestSwitch {
         System.out.println("Masukan Nilai Rekayasa Perangkat Lunak :");
         nilaiRpl = console.nextDouble();
 
+        totalNilai = nilaiSd + nilaiPbo + nilaiBd + nilaiAlgo + nilaiRpl;
+
         console.close();
     }
     
