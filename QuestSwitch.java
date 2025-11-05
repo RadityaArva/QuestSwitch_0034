@@ -8,6 +8,19 @@ public class QuestSwitch {
         double nilaiSd, nilaiPbo, nilaiBd, nilaiAlgo, nilaiRpl, rataRata, totalNilai;
         String grade, mataKuliah;
 
+        System.out.println("Masukan Nilai Anda");
+        System.out.println("==================");
+        System.out.println("Masukan Nilai Struktur Data :");
+        nilaiSd = console.nextDouble();
+        System.out.println("Masukan Nilai Pemrogramman Berorientasi Objek :");
+        nilaiPbo = console.nextDouble();
+        System.out.println("Masukan Nilai Basis Data :");
+        nilaiBd = console.nextDouble();
+        System.out.println("Masukan Nilai Algoritma :");
+        nilaiAlgo = console.nextDouble();
+        System.out.println("Masukan Nilai Rekayasa Perangkat Lunak :");
+        nilaiRpl = console.nextDouble();
+
         console.close();
     }
     
