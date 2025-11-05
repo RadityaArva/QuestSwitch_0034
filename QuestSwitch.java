@@ -22,6 +22,7 @@ public class QuestSwitch {
         nilaiRpl = console.nextDouble();
 
         totalNilai = nilaiSd + nilaiPbo + nilaiBd + nilaiAlgo + nilaiRpl;
+        rataRata = totalNilai / 5;
 
         console.close();
     }
