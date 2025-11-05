@@ -6,7 +6,7 @@ public class QuestSwitch {
         Scanner console = new Scanner(System.in);
 
         double nilaiSd, nilaiPbo, nilaiBd, nilaiAlgo, nilaiRpl, rataRata, totalNilai;
-        String grade, mataKuliah, status;
+        String grade, mataKuliah = "";
 
         System.out.println("Masukan Nilai Anda");
         System.out.println("==================");
@@ -21,13 +21,13 @@ public class QuestSwitch {
         System.out.println("Masukan Nilai Rekayasa Perangkat Lunak :");
         nilaiRpl = console.nextDouble();
 
-        totalNilai = nilaiSd + nilaiPbo + nilaiBd + nilaiAlgo + nilaiRpl;
-        rataRata = (totalNilai / 5) / 25;
+        totalNilai = (nilaiSd + nilaiPbo + nilaiBd + nilaiAlgo + nilaiRpl) / 5;
+        rataRata = (totalNilai / 100) * 4;
 
         System.out.println("Total Nilai dan Rata-Rata Anda :");
         System.out.println("================================");
-        System.out.println("Total Nilai :" +totalNilai);
-        System.out.println("Total (IPK skala 4) Anda Adalah :" +rataRata);
+        System.out.println("Total Nilai :" + totalNilai);
+        System.out.println("Total (IPK skala 4) Anda Adalah :" + rataRata);
 
         if (rataRata >= 3.75) {
             grade = "A (Sangat Baik)";
@@ -41,13 +41,11 @@ public class QuestSwitch {
             grade = "C (Kurang)";
         }
 
-        System.out.println("Predikat Akademi Anda Adalah =" +grade);
+        System.out.println("Predikat Akademi Anda Adalah =" + grade);
 
-        if(grade.startsWith("A") || grade.startsWith("AB")){
+        if (grade.startsWith("A") || grade.startsWith("AB")) {
             System.out.println("Selamat anda dinyatakan lolos untuk menjadi Asisten Dosen");
             System.out.println("========================================================");
-
-            console.nextLine();
 
             System.out.println("Silahkan pilih mata kuliah untuk menjadi Asisten Dosen");
             System.out.println("1. Struktur Data");
@@ -55,8 +53,10 @@ public class QuestSwitch {
             System.out.println("3. Basis Data");
             System.out.println("4. Algoritma");
             System.out.println("5. Rekayasa Perangkat Lunak");
+            System.out.print("Masukan Mata Kuliah yang akan Kamu Ambil :");
 
             int pilihan = console.nextInt();
+            console.nextLine();
 
             switch (pilihan) {
                 case 1:
@@ -74,14 +74,17 @@ public class QuestSwitch {
                 case 5:
                     mataKuliah = "Rekayasa Perangkat Lunak";
                     break;
-            
+
                 default:
                     System.out.println("Pilihan Invalid");
                     break;
             }
+            System.out.println("Selamat anda menjadi Asisten Dosen di mata kuliah ( 1-5 ) :" + mataKuliah);
+        } else {
+            System.out.println("Maaf, anda dinyatakan belum lolos sebagai Asisten Dosen");
         }
 
         console.close();
     }
-    
+
 }
