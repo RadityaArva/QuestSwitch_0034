@@ -53,7 +53,7 @@ public class QuestSwitch {
             System.out.println("3. Basis Data");
             System.out.println("4. Algoritma");
             System.out.println("5. Rekayasa Perangkat Lunak");
-            System.out.print("Masukan Mata Kuliah yang akan Kamu Ambil :");
+            System.out.print("Masukan Mata Kuliah yang akan Kamu Ambil (1-5) :");
 
             int pilihan = console.nextInt();
             console.nextLine();
@@ -79,7 +79,7 @@ public class QuestSwitch {
                     System.out.println("Pilihan Invalid");
                     break;
             }
-            System.out.println("Selamat anda menjadi Asisten Dosen di mata kuliah ( 1-5 ) :" + mataKuliah);
+            System.out.println("Selamat anda menjadi Asisten Dosen di mata kuliah :" + mataKuliah);
         } else {
             System.out.println("Maaf, anda dinyatakan belum lolos sebagai Asisten Dosen");
         }
