@@ -41,21 +41,6 @@ public class QuestSwitch {
             grade = "C (Kurang)";
         }
 
-        switch (grade) {
-            case "A":
-            case "AB":
-                status = "Lulus";
-                break;
-            case "B":
-            case "BC":
-            case "C":
-                status = "Tidak Lulus";
-                break;
-            default:
-                status = "Error";
-                break;
-        }
-
         console.close();
     }
     
